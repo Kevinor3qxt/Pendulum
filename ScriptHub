@@ -194,3 +194,29 @@ Methods:SetScriptCreator("CROAXER#8683 and Mistyy#8729 ")
 Methods:RunScript()
 	end,
 })
+local Button = FeTab:CreateButton({
+	Name = "Assassin",
+	Callback = function()
+local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
+Methods:SetWalkSpeed(20)
+Methods:SetIdleAnimation(10117955882, .1)
+Methods:SetWalkAnimation(10106515976, .1)
+Methods:NewAttack("Stomp", "z", 10225984837, .1, 6)
+Methods:NewAttack("Kick", "q", 10117923868, .1, 6)
+Methods:NewAttack("Punch", "e", 9875132590, .1, 6)
+Methods:NewAttack("Fast Stab", "r", 10106498220, .1, 6)
+Methods:SystemMessage([[
+Controls:
+Z - Stomp
+Q - Kick
+E - punch
+R - Fast Stab
+]])
+Methods:SetScriptCreator("3qxt#9919")
+Methods:BodyPartFlingOnTouch("Right Arm")
+Methods:BodyPartFlingOnTouch("Left Arm")
+Methods:BodyPartFlingOnTouch("Right Leg")
+Methods:BodyPartFlingOnTouch("Left Leg")
+Methods:RunScript()
+	end,
+})
