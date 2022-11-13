@@ -1,0 +1,196 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Rayfield:CreateWindow({
+	Name = "Pendulum",
+	LoadingTitle = "Welcome to pendulum",
+	LoadingSubtitle = "by 3qxt",
+	ConfigurationSaving = {
+		Enabled = false,
+		FolderName = nil, -- Create a custom folder for your hub/game
+		FileName = "Big Hub"
+	},
+        Discord = {
+        	Enabled = false,
+        	Invite = "", -- The Discord invite code, do not include discord.gg/
+        	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+        },
+	KeySystem = true, -- Set this to true to use our key system
+	KeySettings = {
+		Title = "Pendulum",
+		Subtitle = "Key System",
+		Note = "Key is Pendulum",
+		FileName = "PendulumKey",
+		SaveKey = true,
+		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+		Key = "Pendulum"
+	}
+})
+local FeTab = Window:CreateTab("Scripts", 4483362458)
+local FeSection = FeTab:CreateSection("these scripts were made using pendulum animator")
+Rayfield:Notify({
+    Title = "Welcome to pendulum Communinty",
+    Content = "This is a Communitny made script",
+    Duration = 6.5,
+    Image = 4483362458,
+    Actions = { -- Notification Buttons
+        Ignore = {
+            Name = "Okay!",
+            Callback = function()
+                print("Hi")
+            end
+		},
+	},
+})
+local Button = FeTab:CreateButton({
+	Name = "Kick",
+	Callback = function()
+		local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
+Methods:SetIdleAnimation(11553700265, 1)
+Methods:SetWalkAnimation(11553907275, .50)
+Methods:NewAttack("Kick", "q", 11553628486, .1, 6)
+Methods:BodyPartFlingOnTouch("Right Leg")
+Methods:SetWalkSpeed(20)
+Methods:SetScriptCreator("3qxt#9919")
+Methods:SystemMessage([[Controls:
+Q - Kick
+]])
+Methods:RunScript()
+	end,
+})
+local Button = FeTab:CreateButton({
+	Name = "Ninja",
+	Callback = function()
+		-- Methods
+local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
+-- Setup
+Methods:SetIdleAnimation(7142933331, .1)
+Methods:SetWalkAnimation(7142732585, .1)
+Methods:SetWalkSpeed(8)
+Methods:EnableSprinting(7142895580, .1, 25)
+-- Fling
+Methods:BodyPartFlingOnTouch("Right Arm")
+Methods:BodyPartFlingOnTouch("Left Arm")
+Methods:BodyPartFlingOnTouch("Right Leg")
+Methods:BodyPartFlingOnTouch("Left Leg")
+-- Key Connections
+Methods:OnKeyPress("q", function()
+    Methods:ApplyVelocityFoward(-5)
+    Methods:ApplyVelocityUpward(80)
+    Methods:PlayAnimation(7142738887, .1, 5)
+end)
+Methods:OnKeyPress("e", function()
+    Methods:ApplyVelocityFoward(5)
+    Methods:ApplyVelocityUpward(80)
+    Methods:PlayAnimation(6936454190, .1, 5)
+end)
+-- Attacks
+Methods:NewAttack("Attack1", "z", 7142975235, .1, 3)
+Methods:NewAttack("Attack2", "x", 7142973417, .1, 3)
+Methods:NewAttack("Attack3", "c", 7142740591, .1, 3)
+Methods:NewAttack("Attack4", "v", 7142741890, .1, 3)
+Methods:NewAttack("Attack5", "b", 6936458635, .1, 3)
+Methods:NewAttack("Attack6", "t", 4837749916, .1, 2)
+-- Finishing up
+Methods:SetScriptCreator("CROAXXER")
+Methods:SystemMessage([[Controls:
+z - Combo 1
+x - Combo 2
+c - Combo 3
+v - Combo 4
+b - Combo 5
+e - Front Flip
+q - Back Flip
+t - Taunt
+Left Alt - Sprint
+]])
+Methods:RunScript()
+	end,
+})
+local Button = FeTab:CreateButton({
+	Name = "Karate Master",
+	Callback = function()
+		local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
+
+Methods:SetIdleAnimation(7142987522, .1)
+Methods:SetWalkAnimation(7142732585, .1)
+Methods:SetWalkSpeed(8)
+Methods:EnableSprinting(6936452291, .1, 25)
+Methods:BodyPartFlingOnTouch("Right Arm")
+Methods:BodyPartFlingOnTouch("Left Arm")
+Methods:BodyPartFlingOnTouch("Right Leg")
+Methods:BodyPartFlingOnTouch("Left Leg")
+Methods:NewAttack("Attack1", "z", 7142975235, .1, 3)
+Methods:NewAttack("Attack2", "x", 7142973417, .1, 3)
+Methods:NewAttack("Attack3", "c", 7142740591, .1, 3)
+Methods:NewAttack("Attack4", "v", 7142741890, .1, 3)
+Methods:NewAttack("Attack5", "b", 6936458635, .1, 3)
+Methods:SetScriptCreator("CROAXXER")
+Methods:SystemMessage([[Controls:
+z - Combo 1
+x - Combo 2
+c - Combo 3
+v - Combo 4
+b - Combo 5
+]])
+Methods:RunScript()
+	end,
+})
+local Button = FeTab:CreateButton({
+	Name = "SpringTrap",
+	Callback = function()
+		local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
+Methods:SetIdleAnimation(11534961449, 1)
+Methods:SetWalkAnimation(11534853408, .15)
+Methods:NewAttack("My Attack", "z", 11534806561, .1, 6)
+Methods:BodyPartFlingOnTouch("Right Arm")
+Methods:SetWalkSpeed(10)
+Methods:RunScript()
+	end,
+})
+local Button = FeTab:CreateButton({
+	Name = "Shadow Brawler",
+	Callback = function()
+		local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
+
+Methods:SetWalkSpeed(35)
+
+Methods:SetIdleAnimation(11534976069, .7)
+Methods:SetWalkAnimation(11543019907, 1)
+
+Methods:NewAttack( "RightSwipe", "e", 11536284844, .01, 6)
+Methods:NewAttack("LeftSwipe", "q", 11535566413, .01, 6)
+Methods:NewAttack("Barrage", "r", 11536151315, .06, 6)
+Methods:NewAttack("Left Kick", "z", 11542353421, .06, 6)
+Methods:NewAttack("Right Kick", "c", 11542680832, .06, 6)
+Methods:BodyPartFlingOnTouch("Right Arm")
+Methods:BodyPartFlingOnTouch("Left Arm")
+Methods:BodyPartFlingOnTouch("Left Leg")
+Methods:BodyPartFlingOnTouch("Right Leg")
+
+
+Methods:OnKeyPress("f", function()
+    Methods:PlayAnimation(8848515310, .1, 2)
+end)
+
+Methods:OnKeyPress("g", function()
+    Methods:PlayAnimation(4827299133, .1, 2)
+end)
+Methods:OnKeyPress("v", function()
+    Methods:PlayAnimation(4776575115 , .1, 2)
+end)
+Methods:SystemMessage([[
+Controls:
+E - RightS wipe
+Q - Left Swipe
+R - Barrage
+Z - Left Kick
+C - Right Kick
+F - IDK
+G - IDk
+V - IDK
+]])
+
+
+Methods:SetScriptCreator("CROAXER#8683 and Mistyy#8729 ")
+Methods:RunScript()
+	end,
+})
