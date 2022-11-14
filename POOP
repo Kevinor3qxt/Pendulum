@@ -266,7 +266,7 @@ end
 function Methods:RunScript()
 	
 function LoadIntro()
-	game:GetService("ContentProvider"):PreloadAsync({""})
+	game:GetService("ContentProvider"):PreloadAsync({"http://www.roblox.com/asset/?id=8955607825"})
 	
 	task.wait()
 	local ScreenGui = Instance.new("ScreenGui")
@@ -300,7 +300,7 @@ function LoadIntro()
 	ImageLabel.BackgroundTransparency = 1.000
 	ImageLabel.Position = UDim2.new(0.5, 0, 1.5, 0)
 	ImageLabel.Size = UDim2.new(0, 300, 0, 300)
-	ImageLabel.Image = ""
+	ImageLabel.Image = "http://www.roblox.com/asset/?id=8955607825"
 
 	TextLabel.Parent = ScreenGui
 	TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
