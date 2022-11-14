@@ -330,7 +330,7 @@ function LoadIntro()
 		end
 	end
 	BlurIn:Pause()
-	Type("Credits:\nScript created using Pro Animator.\nScript created by "..PASettings.ScriptCreator..".", TextLabel)
+	Type("Credits:\nScript created using GORR Animator.\nScript created by "..PASettings.ScriptCreator..".", TextLabel)
 	task.wait(1)
 	workspace["Swish Suck Reversed Metallic Swoosh Impact 2 (SFX)"]:Play()
 	
@@ -520,8 +520,8 @@ function Methods:PlayAnimation(ID, TweenSpeed, Speed)
 end
 
 
-Methods:SystemMessage("Pro ANIMATOR: Script Hash is "..script:GetHash())
-Methods:SystemMessage("Pro ANIMATOR: Script finished loading!")
+Methods:SystemMessage("GORR ANIMATOR: Script Hash is "..script:GetHash())
+Methods:SystemMessage("GORR ANIMATOR: Script finished loading!")
 while task.wait() do
     if CurrentType == "Idle" and Humanoid.Health >= 0 and not Attacking then
         PlayAnimation(PASettings.Animations.IdleAnimation.AnimationID, PASettings.Animations.IdleAnimation.FrameSpeed, PASettings.Animations.IdleAnimation.TweenSpeed, "Idle")
