@@ -223,20 +223,19 @@ Methods:RunScript()
 local Button = FeTab:CreateButton({
 	Name = "Zombie",
 	Callback = function()
-		local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
-Methods:SetWalkSpeed(20)
-Methods:NewAttack("Punch", "E", 7142975235, .1, 3)
-Methods:SetIdleAnimation(7142933331, .1)
-Methods:SetWalkAnimation(7142732585, .1)
-Methods:SystemMessage([[
-Controls:
-E - Punch
+		local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/Pendulum/main/POOP"))()
+Methods:SetWalkSpeed(14)
+Methods:NewAttack("Hit", "Q", 11558997270, 1, 1)
+Methods:SetIdleAnimation(11559046878, 1)
+Methods:SetWalkAnimation(11559017868, .1)
+Methods:SystemMessage([[Controls: 
+Q - hit
 ]])
-Methods:SetScriptCreator("3qxt#9919")
-Methods:BodyPartFlingOnTouch("Right Arm")
-Methods:BodyPartFlingOnTouch("Right Leg")
 Methods:BodyPartFlingOnTouch("Left Arm")
 Methods:BodyPartFlingOnTouch("Left Leg")
+Methods:BodyPartFlingOnTouch("Right Arm")
+Methods:BodyPartFlingOnTouch("Right Leg")
+Methods:SetScriptCreator("3qxt#9919")
 Methods:RunScript()
 	end,
 })
