@@ -264,10 +264,6 @@ function Methods:SetScriptCreator(Name)
 end
 
 function Methods:RunScript()
-	
-function LoadIntro()
-	
-LoadIntro()
 
 if PASettings.Teleportation.Enabled then
     Mouse.KeyDown:Connect(function(Key)
@@ -443,8 +439,7 @@ function Methods:PlayAnimation(ID, TweenSpeed, Speed)
 end
 
 
-Methods:SystemMessage("PENDULUM ANIMATOR: Script Hash is "..script:GetHash())
-Methods:SystemMessage("PENDULUM ANIMATOR: Script finished loading!")
+
 while task.wait() do
     if CurrentType == "Idle" and Humanoid.Health >= 0 and not Attacking then
         PlayAnimation(PASettings.Animations.IdleAnimation.AnimationID, PASettings.Animations.IdleAnimation.FrameSpeed, PASettings.Animations.IdleAnimation.TweenSpeed, "Idle")
