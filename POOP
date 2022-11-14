@@ -264,6 +264,87 @@ function Methods:SetScriptCreator(Name)
 end
 
 function Methods:RunScript()
+	
+function LoadIntro()
+	game:GetService("ContentProvider"):PreloadAsync({"http://www.roblox.com/asset/?id=8955607825"})
+	
+	task.wait()
+	local ScreenGui = Instance.new("ScreenGui")
+	local ImageLabel = Instance.new("ImageLabel")
+	local TextLabel = Instance.new("TextLabel")
+	local Blur = Instance.new("BlurEffect")
+	Blur.Size = 0
+	Blur.Parent = game:GetService("Lighting")
+	ScreenGui.Parent = game:GetService("CoreGui")
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	local Sound0 = Instance.new("Sound")
+	local Sound1 = Instance.new("Sound")
+	local Sound2 = Instance.new("Sound")
+	Sound0.Name = "Swish Suck Reversed Metallic Swoosh Impact 2 (SFX)"
+	Sound0.Parent = workspace
+	Sound0.SoundId = "rbxassetid://9119707271"
+	Sound0.Volume = 10
+	Sound1.Name = "Swoosh"
+	Sound1.Parent = workspace
+	Sound1.SoundId = "rbxassetid://9125527144"
+	Sound1.Volume = 10
+	Sound2.Name = "Typewriter 4 (SFX)"
+	Sound2.Parent = workspace
+	Sound2.SoundId = "rbxassetid://9113880610"
+	Sound2.Volume = 10
+	
+	ImageLabel.Parent = ScreenGui
+	ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ImageLabel.BackgroundTransparency = 1.000
+	ImageLabel.Position = UDim2.new(0.5, 0, 1.5, 0)
+	ImageLabel.Size = UDim2.new(0, 300, 0, 300)
+	ImageLabel.Image = "http://www.roblox.com/asset/?id=8955607825"
+
+	TextLabel.Parent = ScreenGui
+	TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.BackgroundTransparency = 1.000
+	TextLabel.Position = UDim2.new(0.5, 0, 0.699999988, 0)
+	TextLabel.Size = UDim2.new(0, 200, 0, 50)
+	TextLabel.Font = Enum.Font.Ubuntu
+	TextLabel.Text = ""
+	TextLabel.TextColor3 = Color3.fromRGB(43, 97, 191)
+	TextLabel.TextSize = 52.000
+	TextLabel.TextStrokeColor3 = Color3.fromRGB(21, 23, 30)
+	TextLabel.TextStrokeTransparency = .500
+	
+	local BlurIn = game:GetService("TweenService"):Create(Blur, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0), {Size = 56})
+	BlurIn:Play()
+	workspace.Swoosh:Play()
+	ImageLabel:TweenPosition(UDim2.new(0.5, 0, 0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Back, 1)
+	
+	task.wait(1.25)
+	
+	local function Type(Text, Object)
+		for letter,_ in string.gmatch(Text, ".") do
+			workspace["Typewriter 4 (SFX)"]:Play()
+			Object.Text = Object.Text..letter
+			task.wait(.05)
+		end
+	end
+	BlurIn:Pause()
+	Type("Credits:\nScript created using Pro Animator.\nScript created by "..PASettings.ScriptCreator..".", TextLabel)
+	task.wait(1)
+	workspace["Swish Suck Reversed Metallic Swoosh Impact 2 (SFX)"]:Play()
+	
+	local function TweenTransparency(Object, Time, PropertyTable)
+		game:GetService("TweenService"):Create(Object, TweenInfo.new(Time, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), PropertyTable):Play()
+	end
+	
+	TweenTransparency(TextLabel, workspace["Swish Suck Reversed Metallic Swoosh Impact 2 (SFX)"].TimeLength, {TextTransparency = 1, TextStrokeTransparency = 1})
+	TweenTransparency(ImageLabel, workspace["Swish Suck Reversed Metallic Swoosh Impact 2 (SFX)"].TimeLength, {ImageTransparency = 1})
+	game:GetService("TweenService"):Create(Blur, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut, 0), {Size = 0}):Play()
+	task.wait(2)
+	print("Intro done.")
+end
+LoadIntro()
 
 if PASettings.Teleportation.Enabled then
     Mouse.KeyDown:Connect(function(Key)
@@ -439,7 +520,8 @@ function Methods:PlayAnimation(ID, TweenSpeed, Speed)
 end
 
 
-
+Methods:SystemMessage("Pro ANIMATOR: Script Hash is "..script:GetHash())
+Methods:SystemMessage("Pro ANIMATOR: Script finished loading!")
 while task.wait() do
     if CurrentType == "Idle" and Humanoid.Health >= 0 and not Attacking then
         PlayAnimation(PASettings.Animations.IdleAnimation.AnimationID, PASettings.Animations.IdleAnimation.FrameSpeed, PASettings.Animations.IdleAnimation.TweenSpeed, "Idle")
