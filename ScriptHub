@@ -220,3 +220,23 @@ Methods:BodyPartFlingOnTouch("Left Leg")
 Methods:RunScript()
 	end,
 })
+local Button = FeTab:CreateButton({
+	Name = "Zombie",
+	Callback = function()
+		local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
+Methods:SetWalkSpeed(20)
+Methods:NewAttack("Punch", "E", 7142975235, .1, 3)
+Methods:SetIdleAnimation(7142933331, .1)
+Methods:SetWalkAnimation(7142732585, .1)
+Methods:SystemMessage([[
+Controls:
+E - Punch
+]])
+Methods:SetScriptCreator("3qxt#9919")
+Methods:BodyPartFlingOnTouch("Right Arm")
+Methods:BodyPartFlingOnTouch("Right Leg")
+Methods:BodyPartFlingOnTouch("Left Arm")
+Methods:BodyPartFlingOnTouch("Left Leg")
+Methods:RunScript()
+	end,
+})
